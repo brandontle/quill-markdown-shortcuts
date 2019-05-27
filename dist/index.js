@@ -4,7 +4,7 @@ var _hr = _interopRequireDefault(require("./formats/hr"));
 
 var _quill = _interopRequireDefault(require("quill"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -20,7 +20,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-_quill.default.register('formats/horizontal', _hr.default);
+_quill["default"].register('formats/horizontal', _hr["default"]);
 
 var MarkdownShortcuts =
 /*#__PURE__*/
@@ -175,11 +175,11 @@ function () {
         setTimeout(function () {
           _this.quill.deleteText(startIndex, text.length);
 
-          _this.quill.insertEmbed(startIndex + 1, 'hr', true, _quill.default.sources.USER);
+          _this.quill.insertEmbed(startIndex + 1, 'hr', true, _quill["default"].sources.USER);
 
-          _this.quill.insertText(startIndex + 2, '\n', _quill.default.sources.SILENT);
+          _this.quill.insertText(startIndex + 2, '\n', _quill["default"].sources.SILENT);
 
-          _this.quill.setSelection(startIndex + 2, _quill.default.sources.SILENT);
+          _this.quill.setSelection(startIndex + 2, _quill["default"].sources.SILENT);
         }, 0);
       }
     }, {
@@ -187,9 +187,9 @@ function () {
       pattern: /^(\*|\+)\s$/g,
       action: function action(text, selection, pattern) {
         setTimeout(function () {
-          _this.quill.formatLine(selection.index, 1, 'list', 'unordered');
+          _this.quill.deleteText(selection.index, 0);
 
-          _this.quill.deleteText(selection.index - 2, 2);
+          _this.quill.formatLine(selection.index, 1, 'list', 'unordered');
         }, 0);
       }
     }, {
@@ -284,8 +284,8 @@ function () {
           _iteratorError = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion && _iterator.return != null) {
-              _iterator.return();
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
             }
           } finally {
             if (_didIteratorError) {
@@ -331,8 +331,8 @@ function () {
           _iteratorError2 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-              _iterator2.return();
+            if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+              _iterator2["return"]();
             }
           } finally {
             if (_didIteratorError2) {

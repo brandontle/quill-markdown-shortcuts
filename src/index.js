@@ -188,8 +188,8 @@ class MarkdownShortcuts {
         pattern: /^(\*|\+)\s$/g,
         action: (text, selection, pattern) => {
           setTimeout(() => {
+            this.quill.deleteText(selection.index, 0)
             this.quill.formatLine(selection.index, 1, 'list', 'unordered')
-            this.quill.deleteText(selection.index - 2, 2)
           }, 0)
         },
       },

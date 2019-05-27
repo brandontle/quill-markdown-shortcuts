@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _quill = _interopRequireDefault(require("quill"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -23,7 +23,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var BlockEmbed = _quill.default.import('blots/block/embed');
+var BlockEmbed = _quill["default"]["import"]('blots/block/embed');
 
 var HorizontalRule =
 /*#__PURE__*/
@@ -42,4 +42,4 @@ function (_BlockEmbed) {
 HorizontalRule.blotName = 'hr';
 HorizontalRule.tagName = 'hr';
 var _default = HorizontalRule;
-exports.default = _default;
+exports["default"] = _default;
